@@ -1,0 +1,219 @@
+<!-- // el primer archivo de todos los proyectos a realizar debe llamarce index.html,si el proyecto tiene paginas especificas, cada pagina va a tener el nombre que le corresponda pero va a ir ligada con el index del proyecto, esto es por que el servidor va a buscar siempre como primera pagina el index.htm, si no existe, le tengo que decir al servidor cual es la pagina de inicio, si no va a mostar toda la estructura de carpetas de archivos del proyecto. -->
+
+<!-- // la primera linea del index.html es:  -->
+<!DOCTYPE.html> 
+     <!-- ^
+// esto le va a decir al navegar que el codigo que esta leyendo en html5
+
+// Despues tenemos que crear el contenedor principal o padre donde va a almacenarse todo el contenido de nuestro proyecto  acompañado del lang, el cual le dice a nuestro navegador cual es el lenguaje del proyecto español, ingles, portugues , entre otros -->
+
+            <!-- // lenguaje español
+             ^ -->
+<html lang=" es"> 
+    <head> 
+         <!-- // head y body son etiquetas hermanas, en el head, va todo lo impotante para cargar el proyecto , las cosas que construimos, pero que no son visuales para el usuario final, librerias, fuentes, CSS, too lo que necesitamos para que nuestro proyecto funciones, es el cerebro. -->
+
+    <meta charset="UTF-8"/>  
+    <!-- // le da toda la informacion al navegador para que sepa como tratar el proyecto, se cierra sola.
+    // UTF-8 es para que el navegador entienda caracteres especiales. -->
+
+    <meta name="description" content="esta pagina te mostrara fotos de paisajes"/> 
+    <!-- // en este punto, le damos la descipcion al proyecto, este es el punto donde el navegar se refiere para encontrar relacionados a las busquedas de os usuarios, aqui es donde usamos SEO para el posicionamiento  en los buscadores -->
+
+    <meta name="robots" content="index,follow"/> 
+    <!-- // esto autoriza a los robots de los buscadores a colocar nuestra pagina en las busquedas de las personas en los navegadores -->
+
+    <title> Es mi pagina</title>
+    <!-- // aqui se establece el nombre que va a visualizar el usuario en la etiqueta de pagina nueva del buscador, cuando entre a mi proyecto  -->
+
+    <meta name="viewport" content="width=device-width, inictial-scale=1.0"/> 
+    <!-- // esta linea permite que el contenido que el contenido de mi web  se vea bien en el mvil o en el pc sin necesida de tener que estar ajustando el zoom manual por el usuario
+    
+    // con la etiqueta link llamo los estilos que necsito siempre y cuando tenga creado el archivo dentro de mi proyecto para esto syntaxis = <link rel="stylesheet" href="./.kslknsbskbsjv /kasdjkasbdjhab" -->
+    </head>
+
+    <body>  
+        <!-- // aqui va todo lo visible -->
+        <header> 
+            <!-- // aqui va tola la parte principal barras de navegación, logos, nombres ETC -->
+
+            <nav></nav> 
+            <!-- // esta es la  barra de navegación -->
+
+        </header>  
+
+        <main> 
+            <!-- // va fuera del  header por que esto le indica al navegador que aqui va nuestro contenido principal -->
+
+            <section> 
+                <!-- //podemos tener varias secciones -->
+
+                <article> <!-- // cada seccion puede tener varios articulos -->
+
+                    <!-- ETIQUETAS DE IMAGENES -->
+
+                    <figure> 
+                        <!-- // esto le dice al navegador que aqui tengo una imagen -->
+
+                    <img src=" ubicacion de la imagen" alt="descripcio  de la imagen"/> 
+                    <!-- esta es la sintaxis para insertar imagnes, si son carpetas no pueden tener espacios -->
+                    
+                    <figcaption> 
+                     <!-- aqui agregas la descripcion de la imagen y es visible al usuario en la web, no es necesaria siempre, pero la fugure si  -->
+
+                    </figcaption>
+                </figure>
+                
+                <!-- ETIQUETAS DE VIDEO -->
+                
+                <video  controls preload="auto">
+                 <!-- con este indico que tengo un video
+                    controls me salen los controles del video en la web
+                    preload el navegador comienza a descargar el video para que cuando el usuario lo quiera ver este disponible, no reporduce solo 
+                    el #t= es para indicar el tiempo en el que yo quiero que el usuario comience a ver el video y donde quiero que pare. -->
+
+                    <source src=" ubicacion del video y formato #t=10,60"/> 
+                    <!-- // con este puedo darle diferentes formatos al video para que los navegadores lo entiendan, puedo hacer tantos como necesite-->
+                
+                </video>
+
+                </article>
+            </section>
+
+            <!-- FORMULARIOS -->
+
+            <form action="url a donde debe viajar la informacion y se programa con JS">
+                <!-- // le dice al navegador que lo que sigue es un Formulari -->
+
+                <label for="nombre">
+                    <span> ¿cual es tu nombre?</span>
+                    <!-- // es la pregunta que voya a hacer -->
+                    <input type="text" id="nombre" placeholder="Tu nombre"/>
+                    <!-- // el espacio donde  el usuario ingresara la respuesta en type que yo necesite texto , numero, date, time, etc, el ID indica a que pregunta debe hacer referencia el input
+                    placeholder, me ayuda a ponerle un texto de ejemplo al usuario de lo que deberia ir como respuesta en el formulario -->
+                </label>
+
+            </form>
+
+            <!-- CALENDARIOS -->
+<!-- 
+            FORMA 1 : 
+
+            <form action=""> 
+                <label for="hora">
+                    <span>Hora</span>
+                    <input type="time" id="hora" name="hora"/>
+                </label>
+
+                <label for="dia">
+                    <span>Día</span>
+                    <input type="date" id="dia" name="dia"/>
+                </label>
+
+                <label for="semana">
+                    <span>Semana</span>
+                    <input type="week" id="semana" name="semana"/>
+                </label>
+
+                <label for="mes">
+                    <span>Mes</span>
+                    <input type="month" id="mes" name="mes"/>
+                </label>
+
+                <input type="submit">
+            </form> -->
+
+            <!-- FORMA 2: esta es mas simple y resumida -->
+
+            <!-- <form action="">
+                <label for="calendario">
+                    <input type="datetime-local" id="calendario" name="calendario"/>
+                </label>
+
+                <input type="submit"/>
+
+            </form> -->
+
+            <!-- COMO EVITO QUE NO RELLENEN TODA LA INFO Y COM HAGO QUE SE COMPLETEN AUTOMATICAMENTE ALGUNOS CAMPOS -->
+
+            <!-- con autocomplete el formulario hara el autocompletado de las preguntas que el usuario ya ha diligenciado antes, y con required evitara que el usuario de salte preguntas -->
+
+            <form action="">
+
+                <label for="nombre">
+                    <span> ¿cual es tu nombre? </span>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" required/>
+                </label>
+
+                <label for="correo">
+                    <span> ¿cual es tu correo? </span>
+                    <input type="email" id="correo" name="correo" autocomplete="email" required/>
+                </label>
+
+                <label for="pais">
+                    <span> ¿En que pais vives? </span>
+                    <input type="text" id="pais" name="pais" autocomplete="country" required/>
+                </label>
+
+                <label for="zip">
+                    <span> ¿Cual es tu codigo postal? </span>
+                    <input type="text" id="zip" name="zip" autocomplete="postal-code" required/>
+                </label>
+
+                <input type="submit"/>
+
+            </form>   
+
+
+            <!-- EIQUETA SELECT : Para generar listas paar tomar las opciones  -->
+
+            <!-- FORMA 1: NO RECOMENDADA
+
+            <select name=" cursos" id=""></select>
+            <option value="JS">JS</option>
+            <option value="HTML">HTML </option>
+            <option value="CSS">CSS</option>
+            <option value="CLOUD">CLOUD</option> -->
+            
+
+            FORMA 2 : RECOMENDADA 
+
+            <input list="cursos">
+            <datalist id="cursos">
+                <option value="JAVASCRIP"></option>
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="CLOUD"></option>
+            </datalist>
+
+            
+
+            <ul> 
+                <!-- // crea listas desordenadas, salen con biñetas -->
+
+                <li> 
+                    <!-- // elemento de la lista -->
+                </li>
+
+            </ul>  
+            <ol></ol> 
+            <!-- // crea listas ordenadas es decir elemnetos numerados -->
+
+        </main>
+
+        <footer> 
+            <!-- // aqui va el pie de la pagina -->
+        </footer>
+
+        <!-- // ETIQUETAS DE TEXTO -->
+        <p></p> 
+        <!-- // texto -->
+        <h1></h1> 
+        <!-- // encabezados esto le dice al navegador que muestre el titulo mas grande y da un tamaño diferente desde el h1 hasta el h6 -->
+
+        <a href="# soy un link"></a>
+        <!-- // es una etiqueta  ancla, agrega un link  -->
+
+    </body>
+</html>
+     
